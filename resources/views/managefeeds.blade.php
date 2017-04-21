@@ -27,9 +27,9 @@
 	<select name="[{{ $feed->id }}][category_id]" style="width:100%" class="form-control">
 		@foreach ($categories as $category)
 			@if ($feed->category_id == $category->id)
-				<option selected="selected" value="{{ $feed->category->id }}">{{ $category->name }}</option>
+				<option selected="selected" value="{{ $category->id }}">{{ $category->name }}</option>
 			@else
-				<option value="{{ $feed->category->id }}">{{ $category->name }}</option>
+				<option value="{{ $category->id }}">{{ $category->name }}</option>
 			@endif
 		@endforeach
 	</select>

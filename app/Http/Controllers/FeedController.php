@@ -193,7 +193,7 @@ class FeedController extends Controller
 					Article::where('feed_id', $feed['feed_id'])->delete();
 					Feed::where('id', $feed['feed_id'])->delete();
 				} else {
-					Feed::where('id', $feed['feed_id'])->update(['feed_name' => $feed['feed_name']], ['category_id' => $feed['category_id']]);
+					Feed::where('id', $feed['feed_id'])->update(['feed_name' => $feed['feed_name'],'category_id' => $feed['category_id']]);
 				}
 			}
 			return response()->json('done');
